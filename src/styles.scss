@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+app-home {
+    width: 100vw;
+}
+
+app-about {
+    background-image: url('./assets/sparkly\ grid.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+app-projects {
+    background-image: url('./assets/sparkly\ blue\ background.webp');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
