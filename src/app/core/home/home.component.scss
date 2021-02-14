@@ -7,7 +7,7 @@ article {
     flex-wrap: wrap;
     height: 100vh;
 
-    background-image: url("../../../assets/sparkly\ blue\ background.webp");
+    background-image: url("../../../assets/home-background.jpg");
     background-size: cover;
 }
 
@@ -21,6 +21,11 @@ h3 {
     text-align: center;
 }
 
+h3 {
+    position: absolute;
+    top: 58%;
+}
+
 article {
     --color-bright: #f2f1c6;
     --color-orange: #2f7dec;
@@ -31,7 +36,7 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 10px 0;
+    margin: 40px 0 10px 0;
 }
 
 #contact-info .links {

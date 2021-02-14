@@ -3,6 +3,8 @@ section {
     color: white;
     width: 65%;
     height: 65%;
+    position: relative;
+    left: 50px;
 
     .visual-content {
         width: 40%;
@@ -65,9 +67,10 @@ section {
             text-align: center;
         }
 
-        section {
+        .technologies {
             width: 100%;
             height: 50%;
+            left: 0px;
 
             ul {
                 width: 100%;

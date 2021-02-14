@@ -8,6 +8,7 @@ import { HomeComponent } from './core/home/home.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { CoreService } from './core/core.service';
 
 @NgModule({
   declarations: [
