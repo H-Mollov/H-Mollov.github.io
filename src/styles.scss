@@ -12,6 +12,9 @@ body {
 
 main {
     display: flex;
+    height: 100vh;
+    background-image: url("./assets/home-background.jpg");
+    background-size: cover;
 }
 
 app-home {
@@ -22,23 +25,10 @@ app-about {
     background-image: url("./assets/sparkly\ grid.jpg");
     background-size: cover;
     height: 100vh;
-    width: 100vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-app-projects {
-    background-image: url("./assets/abstract-blue.webp");
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 app-certificates {
@@ -49,5 +39,15 @@ app-certificates {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+}
+
+app-projects {
+    background-image: url("./assets/abstract-blue.webp");
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
