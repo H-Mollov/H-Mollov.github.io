@@ -1,0 +1,22 @@
+<section class="main">
+    <div class="focus">
+        <div class="visuals">
+            <img src="../../assets/certificates/Diploma for JS Web Developer.jpeg" alt="">
+            <img src="../../assets/certificates/Diploma for JS Web Developer - back.jpeg" alt="">
+        </div>
+        <a href=""><span>Verify</span></a>
+    </div>
+    <div class="list">
+        <ul>
+            <li *ngFor='let certificate of certificates'>
+                <figure>
+                    <img src="{{certificate.frontImage}}" alt="certificateFrontImage.jpeg">
+                    <figcaption>
+                        <h2>{{certificate.name}}</h2>
+                        <p>Click for Details!</p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+</section>

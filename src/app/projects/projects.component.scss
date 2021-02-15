@@ -25,7 +25,18 @@
 
             &:hover {
                 cursor: pointer;
-                background-image: linear-gradient(to left, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+                background-image: linear-gradient(
+                    to left,
+                    #ff2400,
+                    #e81d1d,
+                    #e8b71d,
+                    #e3e81d,
+                    #1de840,
+                    #1ddde8,
+                    #2b1de8,
+                    #dd00f3,
+                    #dd00f3
+                );
                 -webkit-background-clip: text;
                 color: transparent;
             }
@@ -36,7 +47,6 @@
 .project-items {
     width: 80%;
     height: 75%;
-    overflow: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -53,7 +63,18 @@
         img {
             width: 200px;
             height: 300px;
-            background: linear-gradient(to right bottom, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+            background: linear-gradient(
+                to right bottom,
+                #ff2400,
+                #e81d1d,
+                #e8b71d,
+                #e3e81d,
+                #1de840,
+                #1ddde8,
+                #2b1de8,
+                #dd00f3,
+                #dd00f3
+            );
             padding: 5px;
         }
 
@@ -83,7 +104,7 @@
                 border-radius: 10px;
                 margin: 0px 10px;
                 padding: 5px 0px;
-                
+
                 i {
                     margin-left: 20px;
                 }
@@ -95,15 +116,84 @@
         display: flex;
         flex-wrap: wrap;
         list-style: none;
-        li {
-            border: 5px solid green;
-            box-sizing: border-box;
-            margin: 10px 15px;
+        overflow: auto;
 
-            img {
-                width: 200px;
-                height: 300px;
-                object-fit: fill;
+        li {
+            border: 5px double cyan;
+            box-sizing: border-box;
+            margin: 0px 15px;
+            padding: 20px;
+            border-radius: 20px;
+            height: max-content;
+            background: rgba(59, 72, 164, 0.6);
+            text-align: center;
+            color: white;
+
+            figure {
+                position: relative;
+                margin: 0;
+
+                &:hover figcaption::before,
+                &:hover figcaption::after {
+                    opacity: 1;
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                }
+
+                &:hover figcaption {
+                    opacity: 0.5;
+                }
+
+                &:hover img {
+                    opacity: 0.2;
+                }
+
+                img {
+                    width: 200px;
+                    height: 300px;
+                    object-fit: fill;
+                }
+
+                figcaption {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: black;
+                    background: cyan;
+                    opacity: 0;
+
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        left: 0px;
+                        content: "";
+                        opacity: 0;
+                        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                        transition: opacity 0.35s, transform 0.35s;
+                    }
+
+                    &::before {
+                        border-top: 3px solid black;
+                        border-bottom: 3px solid black;
+                        -webkit-transform: scale(0, 1);
+                        transform: scale(0, 1);
+                    }
+
+                    &::after {
+                        border-right: 3px solid black;
+                        border-left: 3px solid black;
+                        -webkit-transform: scale(1, 0);
+                        transform: scale(1, 0);
+                    }
+                }
             }
         }
     }

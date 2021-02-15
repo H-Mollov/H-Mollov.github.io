@@ -1,0 +1,162 @@
+section.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 85%;
+    position: relative;
+    left: 100px;
+
+    div.focus {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+
+        a {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px;
+            position: relative;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            border-radius: 10px;
+            background: linear-gradient(to right, #00d2ff 0%, #3a47d5 100%);
+            transition: all 0.3s ease-in-out;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                background: linear-gradient(to left, #00d2ff 0%, #3a47d5 100%);
+                transition: opacity 0.5s ease-in;
+                opacity: 0;
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+
+            span {
+                position: relative;
+                z-index: 3;
+            }
+        }
+
+        .visuals {
+            border: 5px double aqua;
+            border-radius: 20px;
+            padding: 25px;
+
+            img {
+                width: 350px;
+                &:nth-child(1) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    div.list {
+        height: 50%;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            color: white;
+            padding: 0;
+            margin: 0;
+            overflow: auto;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: 15px;
+                width: 200px;
+                height: max-content;
+                padding: 15px;
+                background: rgba(59, 72, 164, 0.6);
+                border: 5px double aqua;
+                border-radius: 20px;
+
+                figure {
+                    position: relative;
+                    margin: 0;
+
+                    &:hover figcaption::before,
+                    &:hover figcaption::after {
+                        opacity: 1;
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                    }
+
+                    &:hover figcaption {
+                        opacity: 0.5;
+                    }
+
+                    &:hover img {
+                        opacity: 0.2;
+                    }
+                    
+                    figcaption {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        color: black;
+                        background: cyan;
+                        opacity: 0;
+
+                        &::before,
+                        &::after {
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            bottom: 0px;
+                            left: 0px;
+                            content: "";
+                            opacity: 0;
+                            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                            transition: opacity 0.35s, transform 0.35s;
+                        }
+
+                        &::before {
+                            border-top: 3px solid black;
+                            border-bottom: 3px solid black;
+                            -webkit-transform: scale(0, 1);
+                            transform: scale(0, 1);
+                        }
+
+                        &::after {
+                            border-right: 3px solid black;
+                            border-left: 3px solid black;
+                            -webkit-transform: scale(1, 0);
+                            transform: scale(1, 0);
+                        }
+                    }
+
+                    img {
+                        width: 200px;
+                        height: 300px;
+                        object-fit: fill;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -20,15 +20,14 @@
         </article>
     </div>
     <ul>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
-        <li><img src="../../assets/projectLogo.png" alt=""></li>
+        <li *ngFor="let project of projects">
+            <figure>
+                <img src="{{project.image}}" alt="{{project.name}}.png">
+                <figcaption>
+                    <h2>{{project.name}}</h2>
+                    <p>Click for Details!</p>
+                </figcaption>
+            </figure>
+        </li>
     </ul>
 </section>

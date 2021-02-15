@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as database from '../database/data.json';
 
 @Component({
   selector: 'app-projects',
@@ -12,4 +13,5 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  projects: Array<any> = database.projects;
 }
