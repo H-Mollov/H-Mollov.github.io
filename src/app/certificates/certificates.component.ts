@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as database from '../database/data.json'
 
 @Component({
@@ -6,13 +6,17 @@ import * as database from '../database/data.json'
   templateUrl: './certificates.component.html',
   styleUrls: ['./certificates.component.scss']
 })
-export class CertificatesComponent implements OnInit {
-
+export class CertificatesComponent {
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   certificates: Array<any> = database.certificates;
 
+  focusedCertificate;
+  focusedCertificateStyle: String = "display: none";
+
+  showCertificateDetails(event) {
+    const requestedCertificate = this.certificates.find(el => el.name === event.target.children[0].textContent)
+    this.focusedCertificate = requestedCertificate;
+    this.focusedCertificateStyle = "display: flex";
+  }
 }

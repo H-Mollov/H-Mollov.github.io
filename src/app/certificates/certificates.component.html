@@ -1,15 +1,15 @@
 <section class="main">
-    <div class="focus">
+    <div class="focus" [style]="focusedCertificateStyle" *ngIf="focusedCertificate !== undefined">
         <div class="visuals">
-            <img src="../../assets/certificates/Diploma for JS Web Developer.jpeg" alt="">
-            <img src="../../assets/certificates/Diploma for JS Web Developer - back.jpeg" alt="">
+            <img src="{{focusedCertificate.frontImage}}" alt="certificate-frontImage.jpeg">
+            <img src="{{focusedCertificate.backImage}}" alt="certificate-backImage.jpeg">
         </div>
-        <a href=""><span>Verify</span></a>
+        <a target="_blank" href="{{focusedCertificate.url}}"><span>Verify</span></a>
     </div>
     <div class="list">
         <ul>
             <li *ngFor='let certificate of certificates'>
-                <figure>
+                <figure (click)="showCertificateDetails($event)">
                     <img src="{{certificate.frontImage}}" alt="certificateFrontImage.jpeg">
                     <figcaption>
                         <h2>{{certificate.name}}</h2>

@@ -49,32 +49,24 @@
     height: 75%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     position: relative;
     left: 100px;
+    background: rgba(59, 72, 164, 0.6);
+    border-radius: 20px;
 
     .focus {
-        display: flex;
+        display: none;
         flex-basis: 80%;
         width: 40%;
         justify-content: center;
         color: white;
+        margin: 20px;
+        align-items: center;
 
         img {
             width: 200px;
             height: 300px;
-            background: linear-gradient(
-                to right bottom,
-                #ff2400,
-                #e81d1d,
-                #e8b71d,
-                #e3e81d,
-                #1de840,
-                #1ddde8,
-                #2b1de8,
-                #dd00f3,
-                #dd00f3
-            );
             padding: 5px;
         }
 
@@ -92,7 +84,8 @@
             }
 
             p {
-                margin: 10px 0px;
+                margin: 25px 0px;
+                text-align: center;
             }
 
             a {
@@ -115,17 +108,19 @@
     ul {
         display: flex;
         flex-wrap: wrap;
+
         list-style: none;
         overflow: auto;
+        padding: 0;
+        margin: 20px;
+        gap: 20px;
 
         li {
             border: 5px double cyan;
             box-sizing: border-box;
-            margin: 0px 15px;
             padding: 20px;
             border-radius: 20px;
             height: max-content;
-            background: rgba(59, 72, 164, 0.6);
             text-align: center;
             color: white;
 

@@ -9,7 +9,7 @@ section.main {
     left: 100px;
 
     div.focus {
-        display: flex;
+        display: none;
         flex-direction: column;
         width: max-content;
 
@@ -55,6 +55,7 @@ section.main {
 
             img {
                 width: 350px;
+                height: 500px;
                 &:nth-child(1) {
                     margin-right: 20px;
                 }
@@ -108,7 +109,6 @@ section.main {
                     &:hover img {
                         opacity: 0.2;
                     }
-                    
                     figcaption {
                         position: absolute;
                         top: 0;
