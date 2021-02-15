@@ -1,27 +1,27 @@
 <section class="filters">
     <ul>
-        <li><i class="fas fa-layer-group"></i> All</li>
-        <li><i class="fas fa-ghost"></i> Games</li>
-        <li><i class="fas fa-scroll"></i> Portfolio</li>
-        <li><i class="fas fa-blog"></i> Blogs</li>
+        <li (click)='displayCategory("all")'><i class="fas fa-layer-group"></i> All</li>
+        <li (click)='displayCategory("games")'><i class="fas fa-ghost"></i> Games</li>
+        <li (click)='displayCategory("portfolio")'><i class="fas fa-scroll"></i> Portfolio</li>
+        <li (click)='displayCategory("blogs")'><i class="fas fa-blog"></i> Blogs</li>
     </ul>
 </section>
 <section class="project-items">
-    <div class="focus">
-        <img src="../../assets/projectLogo.png" alt="">
-        <article>
-            <h3>Minesweeper</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse excepturi nam in. Perspiciatis at
-                dignissimos iste sed necessitatibus esse perferendis in excepturi porro natus ullam et doloribus,
-                reiciendis itaque atque amet voluptatibus voluptas. Aperiam assumenda dolore quibusdam ullam. Aliquid
-                quia a magni corrupti accusamus quod unde dolorum reprehenderit explicabo ex.</p>
-                <a href=""><span>Preview</span><i class="far fa-eye"></i></a>
-                <a href=""><span>Code</span><i class="fas fa-code"></i></a>
-        </article>
+    <div class="focus" [style]='focusedProjectStyle' *ngIf='focusedProject !== undefined'>
+        <div class="focus-wrapper">
+            <img src="{{focusedProject.image}}" alt="projectImage.jpeg">
+            <article>
+                <h3>{{focusedProject.name}}</h3>
+                <p>{{focusedProject.description}}</p>
+                <a target="_blank" href="{{focusedProject.previewUrl}}"><span>Preview</span><i
+                        class="far fa-eye"></i></a>
+                <a target="_blank" href="{{focusedProject.codeUrl}}"><span>Code</span><i class="fas fa-code"></i></a>
+            </article>
+        </div>
     </div>
     <ul>
         <li *ngFor="let project of projects">
-            <figure>
+            <figure (click)='showProjectDetails($event)'>
                 <img src="{{project.image}}" alt="{{project.name}}.png">
                 <figcaption>
                     <h2>{{project.name}}</h2>

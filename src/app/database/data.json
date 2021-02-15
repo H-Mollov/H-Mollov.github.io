@@ -48,17 +48,17 @@
             "name": "Minesweeper",
             "description": "Play the classical minesweeper game and try to clear out all the mines on the field. Be carefull though, one wrong move and you'll be blasted to bits! Comes in three modes, each more difficult than the previous one! Have fun! :)",
             "image": "../../assets/projectLogos/minesweeper.png",
-            "codeUrl": "",
-            "previewUrl": "",
+            "codeUrl": "https://github.com/H-Mollov/minesweeper",
+            "previewUrl": "https://hm-minesweeper.netlify.app/",
             "category": "games"
         },
         {
             "name": "Abstract Blue - Portfolio",
             "description": "Curious about the code behind the portfolio you are seeing? I've got you coverred! Link to the github repository can be found below.",
             "image": "../../assets/projectLogos/portfolio.png",
-            "codeUrl": "",
+            "codeUrl": "https://github.com/H-Mollov/H-Mollov.github.io",
             "previewUrl": "",
-            "category": "games"
+            "category": "portfolio"
         }
     ]
 }

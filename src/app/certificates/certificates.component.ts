@@ -15,8 +15,7 @@ export class CertificatesComponent {
   focusedCertificateStyle: String = "display: none";
 
   showCertificateDetails(event) {
-    const requestedCertificate = this.certificates.find(el => el.name === event.target.children[0].textContent)
-    this.focusedCertificate = requestedCertificate;
+    this.focusedCertificate = this.certificates.find(el => el.name === event.target.children[0].textContent);
     this.focusedCertificateStyle = "display: flex";
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as database from '../database/data.json';
 
 @Component({
@@ -6,12 +6,27 @@ import * as database from '../database/data.json';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
+  focusedProject;
+  focusedProjectStyle: String = 'display: none';
+
+  allProjects: Array<any> = database.projects;
+  projects: Array<any> = this.allProjects;
+
+  showProjectDetails(event): void {
+    const requestedProject = this.projects.find(el => el.name === event.target.children[0].textContent);
+    this.focusedProjectStyle = 'display: flex';
+    this.focusedProject = requestedProject;
   }
 
-  projects: Array<any> = database.projects;
+  displayCategory(category): void {
+    if (category === 'all') {
+      this.projects = this.allProjects;
+    } else {
+      this.projects = this.allProjects.filter(el => el.category === category);
+    }
+  }
 }
