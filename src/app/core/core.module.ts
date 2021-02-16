@@ -3,18 +3,20 @@ import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { CoreService } from './core.service';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [
-    NavigationComponent, 
+    NavigationComponent,
     HomeComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   providers: [
-    CoreService
+    CoreService,
   ]
 })
 export class CoreModule { }

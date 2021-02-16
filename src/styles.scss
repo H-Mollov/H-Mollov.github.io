@@ -10,15 +10,12 @@ body {
     margin: 0;
 }
 
-main {
+app-home {
+    width: 100vw;
     display: flex;
     height: 100vh;
     background-image: url("./assets/home-background.jpg");
     background-size: cover;
-}
-
-app-home {
-    width: 100vw;
 }
 
 app-about {
