@@ -1,20 +1,35 @@
-ul {
-    background-color: #190d4b;
-    padding: 0 30px;
-    margin: 0;
-    height: 100vh;
-    position: fixed;
-    li {
-        list-style-type: none;
-        margin: 30px 0px;
-    }
-}
-
 #button-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 160px;
+    background-color: #190d4b;
+    padding: 0 30px;
+    margin: 0;
+    height: 100vh;
+    position: fixed;
+
+    @media all and (max-width: 1100px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: auto;
+        padding: 0;
+    }
+
+    li {
+        list-style-type: none;
+        margin: 30px 0px;
+
+        @media all and (max-width: 1100px) {
+            margin: 10px 20px;
+        }
+
+        @media all and (max-width: 410px) {
+            margin: 5px;
+        }
+
+    }
 
     .button {
         float: left;
@@ -37,7 +52,7 @@ ul {
                 -webkit-background-clip: text;
                 color: transparent;
                 font-weight: 600;
-                
+
                 .icon {
                     transform: scale(0.9) skew(0deg, 0deg);
 
