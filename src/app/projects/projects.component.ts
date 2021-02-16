@@ -17,9 +17,12 @@ export class ProjectsComponent {
   projects: Array<any> = this.allProjects;
 
   showProjectDetails(event): void {
-    const requestedProject = this.projects.find(el => el.name === event.target.children[0].textContent);
+    this.focusedProject = this.projects.find(el => el.name === event.target.children[0].textContent);
     this.focusedProjectStyle = 'display: flex';
-    this.focusedProject = requestedProject;
+  }
+
+  hideProjectDetails(): void {
+    this.focusedProjectStyle = "display: none";
   }
 
   displayCategory(category): void {

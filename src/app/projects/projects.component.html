@@ -6,19 +6,19 @@
         <li (click)='displayCategory("blogs")'><i class="fas fa-blog"></i> Blogs</li>
     </ul>
 </section>
-<section class="project-items">
-    <div class="focus" [style]='focusedProjectStyle' *ngIf='focusedProject !== undefined'>
-        <div class="focus-wrapper">
-            <img src="{{focusedProject.image}}" alt="projectImage.jpeg">
-            <article>
-                <h3>{{focusedProject.name}}</h3>
-                <p>{{focusedProject.description}}</p>
-                <a target="_blank" href="{{focusedProject.previewUrl}}"><span>Preview</span><i
-                        class="far fa-eye"></i></a>
-                <a target="_blank" href="{{focusedProject.codeUrl}}"><span>Code</span><i class="fas fa-code"></i></a>
-            </article>
-        </div>
+<div class="focus" [style]='focusedProjectStyle' *ngIf='focusedProject !== undefined' (click)="hideProjectDetails()">
+    <div class="focus-wrapper">
+        <img src="{{focusedProject.image}}" alt="projectImage.jpeg">
+        <article>
+            <h3>{{focusedProject.name}}</h3>
+            <p>{{focusedProject.description}}</p>
+            <a target="_blank" href="{{focusedProject.previewUrl}}"><span>Preview</span><i
+                    class="far fa-eye"></i></a>
+            <a target="_blank" href="{{focusedProject.codeUrl}}"><span>Code</span><i class="fas fa-code"></i></a>
+        </article>
     </div>
+</div>
+<section class="project-items">
     <ul>
         <li *ngFor="let project of projects">
             <figure (click)='showProjectDetails($event)'>
