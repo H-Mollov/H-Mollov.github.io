@@ -22,6 +22,11 @@ const routes: Routes = [
     path: "projects",
     component: ProjectsComponent
   },
+  {
+    path: "**",
+    pathMatch: "full",
+    redirectTo: '/home'
+  },
 ];
 
 @NgModule({
