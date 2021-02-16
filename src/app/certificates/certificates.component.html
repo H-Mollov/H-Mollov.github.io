@@ -1,11 +1,11 @@
-<section class="main">
-    <div class="focus" [style]="focusedCertificateStyle" *ngIf="focusedCertificate !== undefined">
-        <div class="visuals">
-            <img src="{{focusedCertificate.frontImage}}" alt="certificate-frontImage.jpeg">
-            <img src="{{focusedCertificate.backImage}}" alt="certificate-backImage.jpeg">
-        </div>
-        <a target="_blank" href="{{focusedCertificate.url}}"><span>Verify</span></a>
+<div class="focus" *ngIf="focusedCertificate !== undefined" [style]="focusedCertificateStyle" (click)="hideCertificateDetails($event)">
+    <div class="visuals">
+        <img src="{{focusedCertificate.frontImage}}" alt="certificate-frontImage.jpeg">
+        <img src="{{focusedCertificate.backImage}}" alt="certificate-backImage.jpeg">
     </div>
+    <a target="_blank" href="{{focusedCertificate.url}}"><span>Verify</span></a>
+</div>
+<section class="main">
     <div class="list">
         <ul>
             <li *ngFor='let certificate of certificates'>
