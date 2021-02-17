@@ -19,7 +19,9 @@ Current available content:
 	- Additional information about the projects themselves.
 	- Links to a live demo and the code itself.
 	
-4. Contact Form
-	- A way to get in touch with me.
+4. Certification Page
+	- List with the most recent certificates.
+  - Detailed information about each certificate.
+  - Verify link for each certificate.
 	
 Stay tuned for additional features!
