@@ -5,10 +5,9 @@ export class CoreService {
 
   constructor() { }
 
-  messageArray: Array<string> = ['Application Developer', 
-  'Software Engineer', 
-  'More fancy titles to be included in the future! :D',
-  'Do enjoy your stay! :)'];
+  messageArray: Array<string> = [
+    'Application Developer',
+    'Software Engineer'];
 
   clearIntervalOperation(id): void {
     clearInterval(id);
